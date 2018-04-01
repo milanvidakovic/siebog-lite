@@ -5,8 +5,6 @@ Siebog is an enterprise-scale multiagent middleware consisting of the following 
 
  1. **Extensible Java EE-based Agent Framework (XJAF)**: Built using Java EE technologies, XJAF operates on top of computer clusters, offering automatic agent load-balancing, state-replication, and fault-tolerance.
  2. **Radigost**: Purely web-based multiagent platform, built using JavaScript and HTML5-related standards. Radigost agents are executed inside web browsers and can be used in a wide variety of hardware and software platforms, including personal computers, smartphones and tablets, Smart TVs, etc.
- 3. **Jason interpreter, Enterprise Edition (Jason EE)**: A port of the popular [Jason interpreter](http://jason.sourceforge.net) to Java EE (i.e. using XJAF as the underlying infrastructure). 
- 4. **Distributed Non-Axiomatic Reasoning System (DNARS)**: An advanced reasoning system based on the *Non-Axiomatic Logic* (NAL) formalism.
  
 Selected Publications
 -------
@@ -15,8 +13,6 @@ Selected Publications
  * D. Mitrovic, M. Ivanovic, Z. Budimac, M. Vidakovic. [Radigost: Interoperable web-based multi-agent platform](http://www.sciencedirect.com/science/article/pii/S0164121214000028). *Journal of Systems and Software*, 90:167-178, 2014.
  * M. Vidakovic, M. Ivanovic, D. Mitrovic, Z. Budimac. [Extensible Java EE-based agent framework - past, present, future](http://link.springer.com/chapter/10.1007%2F978-3-642-33323-1_3). In M. Ganzha and L. C. Jain, eds., *Multiagent Systems and Applications*, vol. 45 of *Intelligent Systems Reference Library*, pp. 55-88. Springer Berlin Heidelberg, 2013.
  * D. Mitrovic, M. Ivanovic, Z. Budimac, M. Vidakovic. [Supporting heterogeneous agent mobility with ALAS](http://www.comsis.org/pdf.php?id=020-1201). Computer Science and Information Systems, 9(3):1203-1229, 2012.
-
-Details about non-axiomatic reasoning and NAL can be found [here](http://www.cis.temple.edu/~pwang/papers.html).
 
 Contact
 -------
