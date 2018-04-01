@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: 
+Dependencies: deployment.siebog-ear.ear.siebog-war.war, org.infinispan export

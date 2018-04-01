@@ -1,0 +1,2 @@
+{"name":"test","host":"maja","str":"test@maja","radigost":false}
+{"name":"h","host":"maja","str":"h@maja","radigost":true}

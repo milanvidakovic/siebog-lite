@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Radigost Control Panel</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+
+body, html, .container {
+     height: 100%;
+}
+
+
+.control-label {
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h4>Client-side agent examples (press F12 to watch console)</h4>
+<a href="../">Go to the server-side agent examples</a>
+<div class="container">
+  <div class="row">
+	<div class="col-md-3" style="overflow:auto">
+		<table id="agentClasses" class="table table-responsive">
+			<thead>
+				<tr>
+					<th class="thead-light">Available Agent Classes</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<div class="col-md-9" style="overflow:auto">
+		<form>
+           <div class="form-group">
+               <label for="performative" class="control-label">
+                   Performative:
+               </label>
+               <div class="input-wrap">
+                   <select id="performative" class="form-control-sm">
+                       <option value="">---</option>
+                   </select>
+               </div>
+           </div>
+           <div class="form-group">
+               <label for="receiver" class="control-label">
+                   Receiver:
+               </label>
+               <div class="input-wrap">
+                   <select id="receiver" class="form-control-sm">
+                       <option value="">---</option>
+                   </select>
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Content:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" id="content" class="form-control-sm">
+               </div>
+           </div>
+           <div class="form-group">
+			    <label for="sender" class="control-label">
+			        Sender:
+			    </label>
+			    <div class="input-wrap">
+			        <select id="sender" class="form-control-sm">
+			            <option value="">---</option>
+			        </select>
+			    </div>
+			</div>
+           
+           <div class="form-group">
+               <button type="button" class="btn btn-primary save" id="sendMessage">Send ACL message</button>
+               <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			    Unhide/Hide the rest of fields
+  		       </button>
+           </div>
+  		   <div class="collapse" id="collapseExample">
+            <div class="form-group">
+               <label for="replyTo" class="control-label">
+                   Reply to:
+               </label>
+               <div class="input-wrap">
+                   <select id="replyTo" class="form-control-sm">
+                       <option value="">---</option>
+                   </select>
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Language:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" class="form-control-sm">
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Encoding:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" class="form-control-sm">
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Ontology:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" class="form-control-sm">
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Protocol:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" class="form-control-sm">
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Conversation ID:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" class="form-control-sm">
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Reply with:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" class="form-control-sm">
+               </div>
+           </div>
+           <div class="form-group">
+               <label class="control-label">
+                   Reply by:
+               </label>
+               <div class="input-wrap">
+                   <input type="text" class="form-control-sm">
+               </div>
+           </div>
+           </div>
+       </form>
+	</div>
+  </div>
+</div>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					Enter runtime name for the agent
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<label>Runtime name: </label>
+					<input type="text" name="runtimeNname" id="runtimeName" />
+					<input type="checkbox" name="createStub" id="createStub" /> create server stub
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn btn-primary" id="createAgent" data-dismiss="modal">Create</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/popper.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/siebog/acl.js"></script>
+	<script type="text/javascript" src="../js/siebog/siebogRest.js"></script>
+	<script type="text/javascript" src="../js/radigost/radigost-constants.js"></script>
+	<script type="text/javascript" src="../js/radigost/aid.js"></script>
+	<script type="text/javascript" src="../js/radigost/agentClass.js"></script>
+	<script type="text/javascript" src="../js/radigost/radigost.js"></script>
+	<script type="text/javascript" src="agents.js"></script>
+	<script type="text/javascript" src="../js/websocket.js"></script>
+
+</body>
+</html>
